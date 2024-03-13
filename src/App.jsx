@@ -23,6 +23,7 @@ function App() {
   return (
     <>
       <TaskList tasks={tasks}/>
+      <p className='text-made-by'>Elaborado por Ricardo Castell Rodríguez</p>
     </>
   )
 }
