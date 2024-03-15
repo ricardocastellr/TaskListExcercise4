@@ -1,7 +1,7 @@
 import { Task } from '../Task/Task';
 import './TaskList.css';
 
-export function TaskList({ tasks, onTaskCompletion }) {
+export function TaskList({ tasks, onChangeTaskCompleted }) {
   // Contador para almacenar el número de tareas completadas
   const completedCount = tasks.filter(task => task.completed).length;
 
@@ -13,7 +13,7 @@ export function TaskList({ tasks, onTaskCompletion }) {
           key={task.id}
           title={task.title}
           completed={task.completed}
-          onCompletion={() => onTaskCompletion(task.id)}
+          onCompleted={() => onChangeTaskCompleted(task.id)}
         />
       ))}
       {/* Muestra el contador de tareas completadas */}

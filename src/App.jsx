@@ -25,7 +25,7 @@ function App() {
   const [taskState, setTaskState] = useState(tasks);
 
   // Función para manejar el cambio de estado de una tarea específica (ID)
-  const handleTaskCompletion = (taskId) => {
+  const handleTaskCompleted = (taskId) => {
     const updatedTasks = taskState.map(task => {
       // Si el ID coincide....
       if (task.id === taskId) {
@@ -40,7 +40,7 @@ function App() {
 
   return (
     <div>
-      <TaskList tasks={taskState} onTaskCompletion={handleTaskCompletion} />
+      <TaskList tasks={taskState} onChangeTaskCompleted={handleTaskCompleted} />
       <p className='text-made-by'>Elaborado por Ricardo Castell Rodríguez</p>
     </div>
   );

@@ -1,12 +1,12 @@
 import './Task.css';
 
-export function Task({ title, completed, onCompletion }) {
+export function Task({ title, completed, onCompleted }) {
   return (
     <div className="task-container">
       <input
         type="checkbox"
         checked={completed}
-        onChange={onCompletion}
+        onChange={onCompleted}
         className="checkbox"
       />
       <span
